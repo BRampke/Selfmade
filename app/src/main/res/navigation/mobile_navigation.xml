@@ -18,10 +18,10 @@
             tools:layout="@layout/fragment_dashboard"/>
 
     <fragment
-            android:id="@+id/navigation_notifications"
-            android:name="com.example.selfmade.ui.notifications.NotificationsFragment"
-            android:label="@string/title_notifications"
-            tools:layout="@layout/fragment_notifications"/>
+            android:id="@+id/navigation_creator"
+            android:name="com.example.selfmade.ui.creator.CreatorFragment"
+            android:label="@string/title_creator"
+            tools:layout="@layout/fragment_creator"/>
 
     <fragment
             android:id="@+id/navigation_account"

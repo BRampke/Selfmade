@@ -1,4 +1,4 @@
-package com.example.selfmade.ui.notifications;
+package com.example.selfmade.ui.creator;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,24 +10,23 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import com.example.selfmade.R;
-import com.example.selfmade.databinding.FragmentNotificationsBinding;
+import com.example.selfmade.databinding.FragmentCreatorBinding;
 
-public class NotificationsFragment extends Fragment {
+public class CreatorFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
-    private FragmentNotificationsBinding binding;
+    private CreatorViewModel creatorViewModel;
+    private FragmentCreatorBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        creatorViewModel =
+                new ViewModelProvider(this).get(CreatorViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentCreatorBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textCreator;
+        creatorViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
