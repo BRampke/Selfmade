@@ -1,6 +1,7 @@
 package com.example.selfmade.ui.login;
 
 import android.app.Activity;
+import android.content.Intent;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
@@ -18,10 +19,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.selfmade.MainActivity;
 import com.example.selfmade.R;
 import com.example.selfmade.ui.login.LoginViewModel;
 import com.example.selfmade.ui.login.LoginViewModelFactory;
 import com.example.selfmade.databinding.ActivityLoginBinding;
+
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -124,6 +128,9 @@ public class LoginActivity extends AppCompatActivity {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {
