@@ -10,6 +10,25 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Selfmade">
         <activity
+                android:name=".AccountSettingsActivity"
+                android:exported="true"
+                android:label="@string/title_activity_account_settings"/>
+        <activity
+                android:name=".ProjectUpdateActivity"
+                android:exported="true"
+                android:label="@string/title_activity_project_update"
+                android:theme="@style/Theme.Selfmade.NoActionBar"/>
+        <activity
+                android:name=".ProjectDraftActivity"
+                android:exported="true"
+                android:label="@string/title_activity_project_draft"
+                android:theme="@style/Theme.Selfmade.NoActionBar"/>
+        <activity
+                android:name=".ProjectCreatorActivity"
+                android:exported="true"
+                android:label="@string/title_activity_project_creator"
+                android:theme="@style/Theme.Selfmade.NoActionBar"/>
+        <activity
                 android:name=".MainActivity"
                 android:exported="true"
                 android:label="@string/title_activity_main"/>
